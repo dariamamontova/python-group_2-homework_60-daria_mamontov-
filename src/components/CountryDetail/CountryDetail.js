@@ -26,9 +26,6 @@ class CountryDetail extends Component {
                 <h1>{this.state.loadedCountry.name}</h1>
                 <p>Capital: {this.state.loadedCountry.capital}</p>
                 <p>Region: {this.state.loadedCountry.region}</p>
-                {this.state.loadedCountry.borders.map(country => (
-                        <p>{country}</p>
-                    ))}
             </div> : null
         );
     }

@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import Country from '../../components/Country/Country';
 import axios from 'axios';
 import CountryDetail from '../../components/CountryDetail/CountryDetail'
+import Borders from '../../components/Borders/Borders'
 
 class Countries extends Component {
     state = {
@@ -47,6 +48,10 @@ class Countries extends Component {
                 </section>
                  <section className="col-sm-6">
                     <CountryDetail code={this.state.selectedCountry}/>
+                     <Borders code={this.state.selectedCountry}/>
+                </section>
+                    <section className="col-sm-3">
+
                 </section>
                     </section>
             </Fragment>
