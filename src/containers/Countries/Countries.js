@@ -37,23 +37,21 @@ class Countries extends Component {
         return (
             <Fragment>
                 <section className="row m-5">
-                <section className="col-sm-4">
-                    {this.state.countries.map(country => (
-                        <Country
-                            key={country.name}
-                            name={country.name}
-                            clicked={() => this.countryClicked(country.alpha3Code)}
-                        />
-                    ))}
-                </section>
-                 <section className="col-sm-6">
-                    <CountryDetail code={this.state.selectedCountry}/>
-                     <Borders code={this.state.selectedCountry}/>
-                </section>
-                    <section className="col-sm-3">
-
-                </section>
+                    <section className="col-sm-4">
+                        <h4 className="text-uppercase mb-3">Countries:</h4>
+                        {this.state.countries.map(country => (
+                            <Country
+                                key={country.name}
+                                name={country.name}
+                                clicked={() => this.countryClicked(country.alpha3Code)}
+                            />
+                        ))}
                     </section>
+                    <section className="col-sm-6">
+                        <CountryDetail code={this.state.selectedCountry}/>
+                        <Borders code={this.state.selectedCountry}/>
+                    </section>
+                </section>
             </Fragment>
 
         )

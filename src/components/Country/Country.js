@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Country.css';
 
 class Country extends Component {
     shouldComponentUpdate(nextProps, nextState) {
@@ -8,7 +9,7 @@ class Country extends Component {
     render() {
         return (
             <div>
-                <h4 onClick={this.props.clicked}>{this.props.name}</h4>
+                <p onClick={this.props.clicked}>{this.props.name}</p>
             </div>
         );
     }

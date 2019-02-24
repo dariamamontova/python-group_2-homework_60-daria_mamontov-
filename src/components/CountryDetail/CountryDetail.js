@@ -23,10 +23,11 @@ class CountryDetail extends Component {
     render() {
         return (
             this.state.loadedCountry ? <div className="FullPost">
-                <h1>{this.state.loadedCountry.name}</h1>
-                <p>Capital: {this.state.loadedCountry.capital}</p>
-                <p>Region: {this.state.loadedCountry.region}</p>
-            </div> : null
+                <h1 className="mb-5">{this.state.loadedCountry.name}</h1>
+                <p><span className="font-weight-bold">Capital:</span> {this.state.loadedCountry.capital}</p>
+                <p><span className="font-weight-bold">Region:</span> {this.state.loadedCountry.region}</p>
+                <p><span className="font-weight-bold">Population:</span> {this.state.loadedCountry.population}</p>
+            </div> : <p>Choose a country</p>
         );
     }
 }

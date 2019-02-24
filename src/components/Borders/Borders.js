@@ -35,11 +35,13 @@ class Borders extends Component {
         console.log(this.state.borderCountries)
         return (
             this.state.loadedCountryCode ?
-                <div>
-                    <h4>Borders with:</h4>
+                <div className="mt-3">
+                    <p className="font-weight-bold">Borders with:</p>
+                    <ul>
                     {this.state.borderCountries.map(country => (
-                        <p key={country.name}>{country.name}</p>
+                        <li key={country.name}>{country.name}</li>
                     ))}
+                    </ul>
                 </div> : null
         );
     }
